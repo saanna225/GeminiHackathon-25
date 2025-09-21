@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Karnataka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body and Typography */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #1a1a1a;
+        }
+
+        /* Header and Navigation */
+        .header {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #5a2c1d;
+        }
+        .search-container {
+            flex-grow: 1;
+            margin: 0 2rem;
+            max-width: 600px;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        /* Slideshow Section */
+        .slideshow-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 2rem 0;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        .slideshow-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for a cleaner look */
+        }
+        .slide {
+            display: inline-block;
+            width: 80%; /* Adjust for mobile view */
+            max-width: 500px;
+            margin: 0 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            vertical-align: top;
+        }
+        .slide-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .slide-content {
+            padding: 1.5rem;
+        }
+        .slide-content h3 {
+            margin-top: 0;
+        }
+
+        /* Main Content and Newsletter Sections */
+        .main-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .newsletter-section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .newsletter-section h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .newsletter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: #fcfcfc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 1rem;
+        }
+        .product-info h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        .product-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        .product-info .price {
+            font-weight: bold;
+            color: #5a2c1d;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            color: #eee;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .slide {
+                width: 30%; /* More items visible on desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">Artisan Karnataka</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for Pottery, Paintings, Handlooms...">
+        </div>
+    </div>
+
+    <section class="slideshow-container">
+        <div class="slide">
+            <img src="https://via.placeholder.com/500x250.png?text=Artisan+Image+1" alt="Artisan Story 1" class="slide-image">
+            <div class="slide-content">
+                <h3>The Last of the Silk Weavers</h3>
+                <p>The story of R. Suresh, a master silk weaver from Mysore, keeping a 300-year-old tradition alive against all odds...</p>
+            </div>
+        </div>
+        
+        <div class="slide">
+            <img src="https://via.placeholder.com/500x250.png?text=Artisan+Image+2" alt="Artisan Story 2" class="slide-image">
+            <div class="slide-content">
+                <h3>Clay, Soul, and Sustainability</h3>
+                <p>Meet Savitha, a young potter from Ramnagar, who blends traditional techniques with modern, sustainable practices...</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://via.placeholder.com/500x250.png?text=Artisan+Image+3" alt="Artisan Story 3" class="slide-image">
+            <div class="slide-content">
+                <h3>Painting Life on Paper</h3>
+                <p>Explore the vibrant world of K. Murali, a Chitrakar artist, whose intricate paintings capture the rich folklore of Karnataka...</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="newsletter-section">
+            <h2>Handmade Pottery & Terracotta</h2>
+            <div class="newsletter-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Terracotta+Pot" alt="Terracotta Pot">
+                    <div class="product-info">
+                        <h3>Hand-Etched Terracotta Pot</h3>
+                        <p>Artisan: Lakshmi</p>
+                        <p class="price">₹450</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Ceramic+Mug" alt="Ceramic Mug">
+                    <div class="product-info">
+                        <h3>Ceramic Coffee Mug</h3>
+                        <p>Artisan: Rajesh</p>
+                        <p class="price">₹600</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Folk & Traditional Paintings</h2>
+            <div class="newsletter-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Mysore+Painting" alt="Mysore Painting">
+                    <div class="product-info">
+                        <h3>Traditional Mysore Painting</h3>
+                        <p>Artisan: Savitri</p>
+                        <p class="price">₹3,500</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Chitrakar+Painting" alt="Chitrakar Painting">
+                    <div class="product-info">
+                        <h3>Chitrakar Miniature Art</h3>
+                        <p>Artisan: Murali</p>
+                        <p class="price">₹1,800</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h2>Handwoven Handloom Sarees</h2>
+            <div class="newsletter-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Silk+Saree" alt="Silk Saree">
+                    <div class="product-info">
+                        <h3>Mysore Silk Saree</h3>
+                        <p>Artisan: Ramesh</p>
+                        <p class="price">₹8,000</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Cotton+Saree" alt="Cotton Saree">
+                    <div class="product-info">
+                        <h3>Karnataka Handloom Cotton Saree</h3>
+                        <p>Artisan: Geeta</p>
+                        <p class="price">₹1,200</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Artisan Karnataka. A GenAI 2025 Hackathon Project.</p>
+    </footer>
+
+</body>
+</html>
